@@ -7,7 +7,7 @@
 
     <groupId>com.liip.aem</groupId>
     <artifactId>liip-aem-parent</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Liip AEM - Parent</name>
@@ -17,7 +17,7 @@
         <connection>scm:git:https://github.com/liip/liip-aem.git</connection>
         <developerConnection>scm:git:https://github.com/liip/liip-aem.git</developerConnection>
         <url>https://github.com/liip/liip-aem/tree/${project.scm.tag}</url>
-        <tag>aem-liip-0.1.0</tag>
+        <tag>master</tag>
     </scm>
 
     <dependencyManagement>
