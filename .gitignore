@@ -1,8 +1,4 @@
 target
-.vlt
-content/src/main/content/jcr_root/libs/
 *.iml
 .idea/
-.vlt-sync*
-.vagrant/
 *~
