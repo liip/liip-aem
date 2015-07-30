@@ -1,7 +1,7 @@
 package com.liip.aem.clientlib;
 
 /**
- * Created by mcornut on 26.02.15.
+ * @author Matthieu Cornut
  */
 public final class ClientLibrary {
     private final String categories;

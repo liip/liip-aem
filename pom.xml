@@ -30,4 +30,19 @@
         <module>liip-aem-parent</module>
         <module>pretty-jsp</module>
     </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <configuration>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                    </configuration>
+                    <version>2.5.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

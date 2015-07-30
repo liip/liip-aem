@@ -9,7 +9,7 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
 
 /**
- * Created by mcornut on 04.02.15.
+ * @author Matthieu Cornut
  */
 public class IsPageEqualOrChildOfTag extends ComponentTagSupport {
 

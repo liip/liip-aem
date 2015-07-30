@@ -10,7 +10,7 @@ import javax.servlet.jsp.JspException;
 import java.lang.reflect.Constructor;
 
 /**
- * Created by mcornut on 13.02.15.
+ * @author Matthieu Cornut
  */
 public class CreateTag extends ComponentTagSupport {
 

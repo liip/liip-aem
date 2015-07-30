@@ -13,17 +13,14 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.scripting.SlingBindings;
 import org.apache.sling.api.scripting.SlingScriptHelper;
 import org.apache.sling.scripting.jsp.util.TagUtil;
-import org.apache.sling.settings.SlingSettingsService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.jcr.Session;
 import javax.servlet.jsp.PageContext;
-import java.util.Set;
 
 /**
  * @author Fabrice Hong
- * @date 10.02.15
  */
 public class RequestObjects {
 

@@ -15,7 +15,7 @@ import java.util.*;
 import static com.liip.aem.request.utils.Preconditions.checkNotNull;
 
 /**
- * Created by mcornut on 04.02.15.
+ * @author Matthieu Cornut
  */
 public class PageChildrenTag extends ComponentTagSupport {
 

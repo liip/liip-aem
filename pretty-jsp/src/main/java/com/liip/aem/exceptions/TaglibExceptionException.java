@@ -2,7 +2,6 @@ package com.liip.aem.exceptions;
 
 /**
  * @author Fabrice Hong
- * @date 17.02.15
  */
 public class TaglibExceptionException extends RuntimeException {
 

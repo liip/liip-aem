@@ -4,7 +4,6 @@ import com.liip.aem.exceptions.TaglibExceptionException;
 
 /**
  * @author Fabrice Hong
- * @date 17.02.15
  */
 public class Preconditions {
 

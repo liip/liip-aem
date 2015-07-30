@@ -7,7 +7,7 @@ import javax.servlet.jsp.PageContext;
 import java.util.ArrayList;
 
 /**
- * Created by mcornut on 25.02.15.
+ * @author Matthieu Cornut
  */
 public class PrintClientLibTag extends ComponentTagSupport {
 

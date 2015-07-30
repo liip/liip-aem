@@ -1,8 +1,7 @@
 package com.liip.aem.utils;
 
 /**
- * @author Fabrice Hong -- Liip AG
- * @date 30.07.15
+ * @author Fabrice Hong
  */
 public class StrUtils {
 

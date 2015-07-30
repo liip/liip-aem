@@ -14,7 +14,6 @@ import static com.liip.aem.request.utils.Preconditions.checkFalse;
 
 /**
  * @author Fabrice Hong
- * @date 27.03.15
  */
 public class IfHasPermissionTag extends ComponentTagSupport {
 

@@ -2,12 +2,10 @@ package com.liip.aem.taglib;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
- * Created by mcornut on 19.02.15.
+ * @author Matthieu Cornut
  */
 public class PaginateTag extends ComponentTagSupport{
 

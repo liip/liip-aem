@@ -8,7 +8,6 @@ import javax.servlet.jsp.tagext.TagSupport;
 
 /**
  * @author Fabrice Hong
- * @date 10.02.15
  */
 public class ComponentTagSupport extends TagSupport {
     private RequestObjects requestObjects;

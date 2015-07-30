@@ -9,7 +9,6 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @author Fabrice Hong
- * @date 10.02.15
  */
 public class PageUtils {
 
