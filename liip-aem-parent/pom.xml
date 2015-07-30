@@ -8,19 +8,18 @@
 
     <groupId>com.liip.aem</groupId>
     <artifactId>liip-aem-parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Liip AEM - Parent</name>
     <description>Liip parent for AEM projects</description>
 
-    <prerequisites>
-        <maven>3.0.2</maven>
-    </prerequisites>
-
-    <!-- ====================================================================== -->
-    <!-- P R O P E R T I E S -->
-    <!-- ====================================================================== -->
+    <scm>
+        <connection>scm:git:https://github.com/liip/liip-aem.git</connection>
+        <developerConnection>scm:git:https://github.com/liip/liip-aem.git</developerConnection>
+        <url>https://github.com/liip/liip-aem/tree/${project.scm.tag}</url>
+        <tag>master</tag>
+    </scm>
 
     <dependencyManagement>
         <dependencies>
@@ -159,6 +158,21 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>2.9</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <configuration>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                    </configuration>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-scm-plugin</artifactId>
+                    <version>1.8.1</version>
+                    <configuration>
+                        <tag>${project.artifactId}-${project.version}</tag>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
