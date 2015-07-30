@@ -8,7 +8,7 @@
     <parent>
         <groupId>com.liip.aem</groupId>
         <artifactId>liip-aem-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.1.0-SNAPSHOT</version>
         <relativePath>../liip-aem-parent</relativePath>
     </parent>
 
