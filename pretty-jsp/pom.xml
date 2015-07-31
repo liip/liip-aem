@@ -13,7 +13,29 @@
 
     <artifactId>pretty-jsp</artifactId>
     <packaging>bundle</packaging>
-    <name>Liip AEM - Pretty Jsp</name>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>Tag library for AEM to avoid scriptlets in JSP's</description>
+    <url>https://github.com/liip/liip-aem/tree/master/${project.artifactId}</url>
+
+    <licenses>
+        <license>
+            <name>GNU GENERAL PUBLIC LICENSE</name>
+            <url>https://github.com/liip/liip-aem/blob/master/LICENSE</url>
+        </license>
+    </licenses>
+
+    <contributors>
+        <contributor>
+            <name>Fabrice Hong</name>
+            <organization>Liip AG</organization>
+            <organizationUrl>http://www.liip.ch</organizationUrl>
+        </contributor>
+        <contributor>
+            <name>Matthieu Cornut</name>
+            <organization>Liip AG</organization>
+            <organizationUrl>http://www.liip.ch</organizationUrl>
+        </contributor>
+    </contributors>
 
     <scm>
         <connection>scm:git:https://github.com/liip/liip-aem.git</connection>
@@ -110,6 +132,12 @@
     <profiles>
         <profile>
             <id>release</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
             <build>
                 <plugins>
                     <plugin>

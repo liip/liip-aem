@@ -7,15 +7,27 @@
     <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>AEM Liip - Reactor Project</name>
-    <description>Maven Multimodule project for AEM Demo site</description>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>Multi-module maven project for Liip AEM libraries</description>
+    <url>https://github.com/liip/liip-aem</url>
+
+    <licenses>
+        <license>
+            <name>GNU GENERAL PUBLIC LICENSE</name>
+            <url>https://github.com/liip/liip-aem/blob/master/LICENSE</url>
+        </license>
+    </licenses>
 
     <contributors>
         <contributor>
             <name>Fabrice Hong</name>
+            <organization>Liip AG</organization>
+            <organizationUrl>http://www.liip.ch</organizationUrl>
         </contributor>
         <contributor>
             <name>Matthieu Cornut</name>
+            <organization>Liip AG</organization>
+            <organizationUrl>http://www.liip.ch</organizationUrl>
         </contributor>
     </contributors>
 
