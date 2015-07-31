@@ -6,8 +6,8 @@
         version="2.0">
 
     <tlib-version>1.0</tlib-version>
-    <short-name>liip</short-name>
-    <uri>http://aem.liip.ch/common/taglib</uri>
+    <short-name>pjsp</short-name>
+    <uri>https://github.com/liip/liip-aem/tree/master/pretty-jsp</uri>
     <tag>
         <name>pageChildren</name>
         <tag-class>com.liip.aem.taglib.PageChildrenTag</tag-class>
