@@ -1,2 +1,2 @@
-# pretty-jsp
-Java taglib to eradicate Java from JSP file, forever and ever
+# Pretty-jsp
+Java taglib to eradicate Java from JSP file in AEM projects, forever and ever
