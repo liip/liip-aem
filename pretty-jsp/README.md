@@ -1,16 +1,20 @@
 # Pretty-jsp
-Java taglib to eradicate Java from JSP file in AEM/CQ projects, forever and ever
+Java taglib for AEM / CQ projects.
+
+Designed to eradicate Java from JSP file, forever and ever.
 
 ## Top navigation example
 
 ```html
-<pjsp:pageChildren path="/content/site/en" var="navPages">
+<%@ taglib prefix="pretty" uri="https://github.com/liip/liip-aem/tree/master/pretty-jsp" %>
+
+<pretty:pageChildren path="/content/site/en" var="navPages">
 <ul class="nav navbar-nav">
-    <pjsp:properties var="topNavProps" resource="${resource}"/>
+    <pretty:properties var="topNavProps" resource="${resource}"/>
     <c:forEach items="${navPages}" var="navPage">
-        <pjsp:isPageEqualOrChildOf var="underThisNavPage" targetPage="${navPage}"/>
-        <pjsp:properties var="navPageResourceProps" page="${navPage}"/>
-        <pjsp:isInList var="dropdown" collection="${topNavProps.subMenuPages}" target="${navPage.path}"/>
+        <pretty:isPageEqualOrChildOf var="underThisNavPage" targetPage="${navPage}"/>
+        <pretty:properties var="navPageResourceProps" page="${navPage}"/>
+        <pretty:isInList var="dropdown" collection="${topNavProps.subMenuPages}" target="${navPage.path}"/>
         <li class="${underThisNavPage ? 'active' : ''}">
             <a href="${navPage.path}.html"><span>${navPage.title}</span></a>
         </li>
