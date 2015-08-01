@@ -1,6 +1,6 @@
-package com.liip.aem.request.utils;
+package ch.liip.aem.request.utils;
 
-import com.liip.aem.exceptions.TaglibExceptionException;
+import ch.liip.aem.exceptions.TaglibExceptionException;
 
 /**
  * @author Fabrice Hong

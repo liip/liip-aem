@@ -1,4 +1,4 @@
-package com.liip.aem.request;
+package ch.liip.aem.request;
 
 /**
  * @author Fabrice Hong

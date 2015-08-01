@@ -1,4 +1,4 @@
-package com.liip.aem.exceptions;
+package ch.liip.aem.exceptions;
 
 /**
  * @author Fabrice Hong

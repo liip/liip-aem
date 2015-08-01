@@ -1,7 +1,7 @@
-package com.liip.aem.taglib;
+package ch.liip.aem.taglib;
 
-import com.liip.aem.exceptions.TaglibExceptionException;
-import com.liip.aem.request.RequestObjects;
+import ch.liip.aem.request.RequestObjects;
+import ch.liip.aem.exceptions.TaglibExceptionException;
 
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import static com.liip.aem.request.utils.Preconditions.checkFalse;
+import static ch.liip.aem.request.utils.Preconditions.checkFalse;
 
 /**
  * @author Fabrice Hong

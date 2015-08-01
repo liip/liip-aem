@@ -1,4 +1,4 @@
-package com.liip.aem.utils;
+package ch.liip.aem.utils;
 
 /**
  * @author Fabrice Hong

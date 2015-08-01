@@ -1,11 +1,11 @@
-package com.liip.aem.request;
+package ch.liip.aem.request;
 
 import com.adobe.granite.security.user.UserProperties;
 import com.day.cq.personalization.UserPropertiesUtil;
 import com.day.cq.wcm.api.LanguageManager;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
-import com.liip.aem.request.utils.PageUtils;
+import ch.liip.aem.request.utils.PageUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;

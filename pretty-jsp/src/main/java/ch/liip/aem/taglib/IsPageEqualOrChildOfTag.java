@@ -1,9 +1,9 @@
-package com.liip.aem.taglib;
+package ch.liip.aem.taglib;
 
 
+import ch.liip.aem.request.RequestObjects;
+import ch.liip.aem.request.utils.PageUtils;
 import com.day.cq.wcm.api.Page;
-import com.liip.aem.request.RequestObjects;
-import com.liip.aem.request.utils.PageUtils;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;

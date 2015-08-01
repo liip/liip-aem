@@ -1,11 +1,10 @@
-package com.liip.aem.taglib;
+package ch.liip.aem.taglib;
 
-import com.liip.aem.exceptions.TaglibExceptionException;
-import com.liip.aem.request.utils.Preconditions;
+import ch.liip.aem.exceptions.TaglibExceptionException;
+import ch.liip.aem.request.utils.Preconditions;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.Tag;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
@@ -30,7 +29,7 @@ public class IsInListTag extends ComponentTagSupport {
         }
         Boolean result = actualCollection.contains(target);
         pageContext.setAttribute(var, result, PageContext.PAGE_SCOPE);
-        return Tag.SKIP_BODY;
+        return SKIP_BODY;
     }
 
     public void setVar(String var) {

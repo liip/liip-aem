@@ -1,4 +1,4 @@
-package com.liip.aem.request.utils;
+package ch.liip.aem.request.utils;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;

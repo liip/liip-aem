@@ -1,9 +1,9 @@
-package com.liip.aem.taglib;
+package ch.liip.aem.taglib;
 
-import com.liip.aem.exceptions.TaglibExceptionException;
-import com.liip.aem.request.Action;
-import com.liip.aem.request.RequestAware;
-import com.liip.aem.request.RequestObjects;
+import ch.liip.aem.request.Action;
+import ch.liip.aem.request.RequestObjects;
+import ch.liip.aem.exceptions.TaglibExceptionException;
+import ch.liip.aem.request.RequestAware;
 import org.apache.sling.commons.classloader.DynamicClassLoaderManager;
 
 import javax.servlet.jsp.JspException;

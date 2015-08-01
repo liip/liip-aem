@@ -1,4 +1,4 @@
-package com.liip.aem.clientlib;
+package ch.liip.aem.clientlib;
 
 /**
  * @author Matthieu Cornut

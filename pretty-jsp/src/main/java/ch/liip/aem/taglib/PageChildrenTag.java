@@ -1,18 +1,18 @@
-package com.liip.aem.taglib;
+package ch.liip.aem.taglib;
 
 
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageFilter;
-import com.liip.aem.exceptions.ComponentException;
-import com.liip.aem.request.RequestObjects;
-import com.liip.aem.utils.StrUtils;
+import ch.liip.aem.exceptions.ComponentException;
+import ch.liip.aem.request.RequestObjects;
+import ch.liip.aem.utils.StrUtils;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
 import java.io.IOException;
 import java.util.*;
 
-import static com.liip.aem.request.utils.Preconditions.checkNotNull;
+import static ch.liip.aem.request.utils.Preconditions.checkNotNull;
 
 /**
  * @author Matthieu Cornut

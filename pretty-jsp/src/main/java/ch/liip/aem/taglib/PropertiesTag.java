@@ -1,10 +1,10 @@
-package com.liip.aem.taglib;
+package ch.liip.aem.taglib;
 
+import ch.liip.aem.exceptions.TaglibExceptionException;
+import ch.liip.aem.request.RequestObjects;
+import ch.liip.aem.request.utils.Preconditions;
+import ch.liip.aem.request.utils.ResourceUtils;
 import com.day.cq.wcm.api.Page;
-import com.liip.aem.exceptions.TaglibExceptionException;
-import com.liip.aem.request.RequestObjects;
-import com.liip.aem.request.utils.Preconditions;
-import com.liip.aem.request.utils.ResourceUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 
@@ -22,7 +22,7 @@ public class PropertiesTag extends ComponentTagSupport {
 
     @Override
     public int doStartTag() throws JspException {
-        Preconditions.checkTrue(this.resource==null || this.page == null,
+        Preconditions.checkTrue(this.resource == null || this.page == null,
                 String.format("You cannot use page attribute and resource attribute in the same time. Page = '%s', Resource = '%s'",
                         this.page,
                         this.resource)

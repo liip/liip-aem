@@ -1,6 +1,6 @@
-package com.liip.aem.taglib;
+package ch.liip.aem.taglib;
 
-import com.liip.aem.request.RequestObjects;
+import ch.liip.aem.request.RequestObjects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

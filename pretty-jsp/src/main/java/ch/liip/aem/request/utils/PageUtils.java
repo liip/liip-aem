@@ -1,4 +1,4 @@
-package com.liip.aem.request.utils;
+package ch.liip.aem.request.utils;
 
 import com.day.cq.wcm.api.LanguageManager;
 import com.day.cq.wcm.api.Page;

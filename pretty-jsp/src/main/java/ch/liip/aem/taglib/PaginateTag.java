@@ -1,4 +1,4 @@
-package com.liip.aem.taglib;
+package ch.liip.aem.taglib;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;

@@ -1,6 +1,6 @@
-package com.liip.aem.taglib;
+package ch.liip.aem.taglib;
 
-import com.liip.aem.request.RequestObjects;
+import ch.liip.aem.request.RequestObjects;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;

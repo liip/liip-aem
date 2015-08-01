@@ -10,7 +10,7 @@
     <uri>https://github.com/liip/liip-aem/tree/master/pretty-jsp</uri>
     <tag>
         <name>pageChildren</name>
-        <tag-class>com.liip.aem.taglib.PageChildrenTag</tag-class>
+        <tag-class>ch.liip.aem.taglib.PageChildrenTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>path</name>
@@ -41,7 +41,7 @@
     </tag>
     <tag>
         <name>paginate</name>
-        <tag-class>com.liip.aem.taglib.PaginateTag</tag-class>
+        <tag-class>ch.liip.aem.taglib.PaginateTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <description>Number of the current page. 1 if not set or not a parsable integer.</description>
@@ -71,10 +71,11 @@
     </tag>
     <tag>
         <name>create</name>
-        <tag-class>com.liip.aem.taglib.CreateTag</tag-class>
+        <tag-class>ch.liip.aem.taglib.CreateTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
-            <description>Class to instanciate. If the class implements com.liip.aem.request.Action the method 'execute' will be called</description>
+            <description>Class to instanciate. If the class implements ch.liip.aem.request.Action the method 'execute'
+                will be called</description>
             <name>type</name>
             <required>true</required>
             <rtexprvalue>true</rtexprvalue>
@@ -83,7 +84,7 @@
     </tag>
     <tag>
         <name>isPageEqualOrChildOf</name>
-        <tag-class>com.liip.aem.taglib.IsPageEqualOrChildOfTag</tag-class>
+        <tag-class>ch.liip.aem.taglib.IsPageEqualOrChildOfTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>var</name>
@@ -105,7 +106,7 @@
     </tag>
     <tag>
         <name>properties</name>
-        <tag-class>com.liip.aem.taglib.PropertiesTag</tag-class>
+        <tag-class>ch.liip.aem.taglib.PropertiesTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>page</name>
@@ -130,7 +131,7 @@
     </tag>
     <tag>
         <name>isInList</name>
-        <tag-class>com.liip.aem.taglib.IsInListTag</tag-class>
+        <tag-class>ch.liip.aem.taglib.IsInListTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>var</name>
@@ -150,7 +151,7 @@
     </tag>
     <tag>
         <name>requestObjects</name>
-        <tag-class>com.liip.aem.taglib.RequestObjectsTag</tag-class>
+        <tag-class>ch.liip.aem.taglib.RequestObjectsTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>var</name>
@@ -161,7 +162,7 @@
     <tag>
         <description>Include client-side libraries in order to print them at the end of dom with liip:printClientLib.</description>
         <name>includeClientLib</name>
-        <tag-class>com.liip.aem.taglib.IncludeClientLibTag</tag-class>
+        <tag-class>ch.liip.aem.taglib.IncludeClientLibTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>categories</name>
@@ -192,13 +193,13 @@
     <tag>
         <description>Print client-side libraries cached by liip:includeClientLib. Using the ui:includeClientLib AEM tag.</description>
         <name>printClientLib</name>
-        <tag-class>com.liip.aem.taglib.PrintClientLibTag</tag-class>
+        <tag-class>ch.liip.aem.taglib.PrintClientLibTag</tag-class>
         <body-content>empty</body-content>
     </tag>
     <tag>
         <description>execute body if the user has all permissions on the provided path</description>
         <name>ifHasPermission</name>
-        <tag-class>com.liip.aem.taglib.IfHasPermissionTag</tag-class>
+        <tag-class>ch.liip.aem.taglib.IfHasPermissionTag</tag-class>
         <body-content>scriptless</body-content>
         <attribute>
             <name>path</name>
