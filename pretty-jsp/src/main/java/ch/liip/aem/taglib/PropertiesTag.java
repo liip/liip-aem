@@ -32,8 +32,7 @@ public class PropertiesTag extends ComponentTagSupport {
             actualResource = this.resource;
         } else { // then page must be used
             RequestObjects requestObjects = createRequestObjects();
-            Page actualPage = determinePage(requestObjects);
-            actualResource = actualPage.getContentResource();
+            actualResource = requestObjects.getResource();
         }
         Resource resourceChild = ResourceUtils.getResourceChild(actualResource, this.path);
         if (resourceChild==null) {

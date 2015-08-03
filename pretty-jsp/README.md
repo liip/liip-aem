@@ -3,7 +3,7 @@ Java taglib for AEM / CQ projects.
 
 Designed to eradicate Java from JSP file, forever and ever.
 
-## Top navigation example
+## Top-Navigation menu example
 
 ```html
 <%@ taglib prefix="pretty" uri="https://github.com/liip/liip-aem/tree/master/pretty-jsp" %>
