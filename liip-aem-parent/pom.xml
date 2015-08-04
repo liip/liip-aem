@@ -23,14 +23,26 @@
 
     <contributors>
         <contributor>
+            <id>fhong</id>
             <name>Fabrice Hong</name>
+            <email>fabrice.hong@gmail.com</email>
             <organization>Liip AG</organization>
             <organizationUrl>http://www.liip.ch</organizationUrl>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+1</timezone>
         </contributor>
         <contributor>
+            <id>mcornut</id>
             <name>Matthieu Cornut</name>
+            <email>matthieu.cornut@liip.ch</email>
             <organization>Liip AG</organization>
             <organizationUrl>http://www.liip.ch</organizationUrl>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+1</timezone>
         </contributor>
     </contributors>
 
