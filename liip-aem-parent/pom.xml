@@ -21,8 +21,8 @@
         </license>
     </licenses>
 
-    <contributors>
-        <contributor>
+    <developers>
+        <developer>
             <id>fhong</id>
             <name>Fabrice Hong</name>
             <email>fabrice.hong@gmail.com</email>
@@ -32,8 +32,8 @@
                 <role>Developer</role>
             </roles>
             <timezone>+1</timezone>
-        </contributor>
-        <contributor>
+        </developer>
+        <developer>
             <id>mcornut</id>
             <name>Matthieu Cornut</name>
             <email>matthieu.cornut@liip.ch</email>
@@ -43,8 +43,8 @@
                 <role>Developer</role>
             </roles>
             <timezone>+1</timezone>
-        </contributor>
-    </contributors>
+        </developer>
+    </developers>
 
     <scm>
         <connection>scm:git:https://github.com/liip/liip-aem.git</connection>
