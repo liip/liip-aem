@@ -16,11 +16,16 @@
     <uri>https://github.com/liip/liip-aem/tree/master/pretty-jsp</uri>
 
     <tag>
-        <name>pageChildren</name>
-        <tag-class>ch.liip.aem.taglib.PageChildrenTag</tag-class>
+        <name>listPageChildren</name>
+        <tag-class>ch.liip.aem.taglib.ListPageChildrenTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
-            <name>path</name>
+            <name>relPath</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>absPath</name>
             <rtexprvalue>true</rtexprvalue>
             <type>java.lang.String</type>
         </attribute>
@@ -38,6 +43,42 @@
             <name>reverse</name>
             <required>false</required>
             <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>maxItems</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.Integer</type>
+        </attribute>
+        <attribute>
+            <name>resource</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>org.apache.sling.api.resource.Resource</type>
+        </attribute>
+    </tag>
+    <tag>
+        <name>listChildren</name>
+        <tag-class>ch.liip.aem.taglib.ListChildrenTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>relPath</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>absPath</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>resource</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>org.apache.sling.api.resource.Resource</type>
+        </attribute>
+        <attribute>
+            <name>var</name>
+            <required>true</required>
+            <rtexprvalue>false</rtexprvalue>
         </attribute>
         <attribute>
             <name>maxItems</name>
@@ -126,7 +167,12 @@
             <type>org.apache.sling.api.resource.Resource</type>
         </attribute>
         <attribute>
-            <name>path</name>
+            <name>relPath</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>absPath</name>
             <rtexprvalue>true</rtexprvalue>
             <type>java.lang.String</type>
         </attribute>

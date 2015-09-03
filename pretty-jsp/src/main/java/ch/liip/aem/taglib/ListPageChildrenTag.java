@@ -1,11 +1,12 @@
 package ch.liip.aem.taglib;
 
 
-import com.day.cq.wcm.api.Page;
-import com.day.cq.wcm.api.PageFilter;
 import ch.liip.aem.exceptions.ComponentException;
 import ch.liip.aem.request.RequestObjects;
 import ch.liip.aem.utils.StrUtils;
+import com.day.cq.wcm.api.Page;
+import com.day.cq.wcm.api.PageFilter;
+import org.apache.sling.api.resource.Resource;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
@@ -17,17 +18,17 @@ import static ch.liip.aem.request.utils.Preconditions.checkNotNull;
 /**
  * @author Matthieu Cornut
  */
-public class PageChildrenTag extends ComponentTagSupport {
+public class ListPageChildrenTag extends ComponentTagSupport {
 
-    private String path;
+    private String relPath;
+    private String absPath;
     private String var;
     private Integer maxItems;
     private String orderBy;
     private Boolean reverse;
+    private Resource resource;
 
-    private final String DATE_FORMAT = "dd/MM/yy";
-
-    public PageChildrenTag() {
+    public ListPageChildrenTag() {
         super();
     }
 
@@ -40,9 +41,10 @@ public class PageChildrenTag extends ComponentTagSupport {
             checkNotNull(orderBy, "The parameter 'reverse' is definable only if the paramter 'orderBy' is defined");
         }
 
+        Resource actualResource;
         try {
-            rootPage = determineRootPage(requestObjects);
-        } catch (ComponentException e) {
+            actualResource = getActualResource(this.resource, this.relPath, this.absPath);
+        } catch (RuntimeException e) {
             try {
                 this.pageContext.getOut().print(e.getMessage());
             } catch (IOException e2) {
@@ -50,6 +52,9 @@ public class PageChildrenTag extends ComponentTagSupport {
             }
             return super.doEndTag();
         }
+
+        rootPage = actualResource.adaptTo(Page.class);
+
 
         // Result list
         List<Page> items = new ArrayList<Page>();
@@ -72,14 +77,14 @@ public class PageChildrenTag extends ComponentTagSupport {
 
     private Page determineRootPage(RequestObjects requestObjects) throws ComponentException {
         String rootPagePath;
-        if (StrUtils.isEmpty(this.path)) {
+        if (StrUtils.isEmpty(this.relPath)) {
             rootPagePath = requestObjects.getCurrentPage().getPath();
         } else {
-            rootPagePath = this.path;
+            rootPagePath = this.relPath;
         }
 
         if (rootPagePath == null) {
-            throw new ComponentException("Unable to find rootPagePath. [path = " + this.path + "]");
+            throw new ComponentException("Unable to find rootPagePath. [path = " + this.relPath + "]");
         }
 
         Page rootPage = requestObjects.getPageManager().getPage(rootPagePath);
@@ -100,11 +105,11 @@ public class PageChildrenTag extends ComponentTagSupport {
     public void setVar(String var) {
         this.var = var;
     }
-    public String getPath() {
-        return path;
+    public String getRelPath() {
+        return relPath;
     }
-    public void setPath(String path) {
-        this.path = path;
+    public void setRelPath(String relPath) {
+        this.relPath = relPath;
     }
     public Integer getMaxItems() {
         return maxItems;
@@ -121,6 +126,14 @@ public class PageChildrenTag extends ComponentTagSupport {
 
     public void setReverse(Boolean reverse) {
         this.reverse = reverse;
+    }
+
+    public void setResource(Resource resource) {
+        this.resource = resource;
+    }
+
+    public void setAbsPath(String absPath) {
+        this.absPath = absPath;
     }
 }
 

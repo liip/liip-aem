@@ -1,9 +1,7 @@
 package ch.liip.aem.taglib;
 
-import ch.liip.aem.exceptions.TaglibExceptionException;
 import ch.liip.aem.request.RequestObjects;
 import ch.liip.aem.request.utils.Preconditions;
-import ch.liip.aem.request.utils.ResourceUtils;
 import com.day.cq.wcm.api.Page;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
@@ -16,7 +14,8 @@ import javax.servlet.jsp.tagext.Tag;
 public class PropertiesTag extends ComponentTagSupport {
 
     private String var;
-    private String path;
+    private String relPath;
+    private String absPath;
     private Page page;
     private Resource resource;
 
@@ -27,17 +26,7 @@ public class PropertiesTag extends ComponentTagSupport {
                         this.page,
                         this.resource)
         );
-        Resource actualResource;
-        if (this.resource!=null) {
-            actualResource = this.resource;
-        } else { // then page must be used
-            RequestObjects requestObjects = createRequestObjects();
-            actualResource = requestObjects.getResource();
-        }
-        Resource resourceChild = ResourceUtils.getResourceChild(actualResource, this.path);
-        if (resourceChild==null) {
-            throw new TaglibExceptionException(String.format("Cannot find path '%s' on resource '%s'", this.path, actualResource));
-        }
+        Resource resourceChild = getActualResource(this.resource, this.relPath, this.absPath);
         ValueMap properties = resourceChild.adaptTo(ValueMap.class);
         pageContext.setAttribute(var, properties, PageContext.PAGE_SCOPE);
         return Tag.SKIP_BODY;
@@ -50,8 +39,8 @@ public class PropertiesTag extends ComponentTagSupport {
     public void setVar(String var) {
         this.var = var;
     }
-    public void setPath(String path) {
-        this.path = path;
+    public void setRelPath(String relPath) {
+        this.relPath = relPath;
     }
     public void setPage(Page page) {
         this.page = page;
@@ -59,5 +48,9 @@ public class PropertiesTag extends ComponentTagSupport {
 
     public void setResource(Resource resource) {
         this.resource = resource;
+    }
+
+    public void setAbsPath(String absPath) {
+        this.absPath = absPath;
     }
 }
